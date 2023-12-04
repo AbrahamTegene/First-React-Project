@@ -71,7 +71,7 @@ const Navbar = () => {
           </div>
 
            {/* menu btn for only mobile devices  */}
-            <div className="md:hidden">
+            <div className="md:hidden ">
                 <button 
                 onClick={toggleMenu}
                 className="text-neutralDGrey focus:outline-none focus:text-gray-500">
@@ -85,7 +85,7 @@ const Navbar = () => {
         </div>
 
         {/*nav items for mobilr devices*/}
-        <div className={`space-y-4 px-4 mt-16 py-7 bg-brandPrimary ${ ismenopen ? "block fixed top-0 right-0 left-0 " : "hidden"}`}>
+        <div className={`space-y-4 px-4 mt-16 py-7 bg-brandPrimary ${ ismenopen ? "block fixed top-0 right-0 left-0   lg:hidden md:hidden  " : "hidden"}`}>
           <ul>{navItems.map(({ link, path }) => (
               <li key={path}>
                 <Link to={path} spy={true} smooth={true} offset={-100} className="block cursor-pointer text-base text-white hover:text-brandPrimary first:font-medium ">
